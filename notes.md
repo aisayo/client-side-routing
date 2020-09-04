@@ -1,4 +1,4 @@
-# Client-side Routing
+# Client-side Routing :globe_with_meridians:
 
 Goal: Making an app with multiple URL's that render different components
 
