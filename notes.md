@@ -19,7 +19,7 @@ Faster because we are not waiting for a response, just switching components
 3. Wrap component being rendered to DOM with `Router`:
     `ReactDOM.render((<Router></Router>))`
 
-- This need to go around any part of the app that is going to use routing
+  - This need to go around any part of the app that is going to use routing
 
 4. Use `Route` to define route and component associated with route:
     `<Route path="/" component={Home} />`
