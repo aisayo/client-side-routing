@@ -12,7 +12,8 @@ class App extends Component {
                     <NavLink
                         to="/"
                         exact
-                        activeStyle={{color: 'black'}} 
+                        activeStyle={{color: 'red'}} 
+                        activeClassName="selectedLink"
                     > 
                          Home 
                     </NavLink> | 
@@ -20,7 +21,7 @@ class App extends Component {
                     <NavLink
                         to="/about"
                         exact
-                        activeStyle={{color: 'black'}} 
+                        activeStyle={{color: 'red'}} 
                     > 
                         About 
                     </NavLink> | 

@@ -19,6 +19,8 @@ Faster because we are not waiting for a response, just switching components
 3. Wrap component being rendered to DOM with `Router`:
     `ReactDOM.render((<Router></Router>))`
 
+- This need to go around any part of the app that is going to use routing
+
 4. Use `Route` to define route and component associated with route:
     `<Route path="/" component={Home} />`
     
@@ -28,7 +30,35 @@ exact path
 
 ### NavLink
 
+- Different from `<Link>` only by allowing styling 
+
+- Has many different styling props:
+
+  - activeClassName - set to 'active' by default when link is clicked, can be customized (good to use in CSS)
+  - activeStyle - allows inline styling of selected link
+  - exact will style the exact link that matches the URL
+
+### Link
+
+### Switch
+
+- looks through its children `<Route>`s and renders the first one that matches the current URL.
+
+### Nested Routing 
+
+- match.url
+- match.path
+
+### Render inside of Route 
+
+- used to pass props down
+- used for simple route renders by defining inline code
+
+### useParams()
+
+- 
 
 ## Resources
 
 - [React Router](https://reactrouter.com/web/guides/quick-start)
+- [React Router Video](https://reactrouter.com/)
