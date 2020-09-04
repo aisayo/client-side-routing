@@ -7,9 +7,17 @@ const CharactersList = (props) => {
     const { chars, onClick } = props
 
     return (
+
         <div>
-            {chars.map(char => <CharacterCard char={char} onClick={onClick}/>)}
+            { chars.map(char => 
+                < CharacterCard 
+                    key={char.char_id} 
+                    char={char} 
+                    onClick={onClick}
+                />
+            ) }
         </div>
+        
     );
 };
 

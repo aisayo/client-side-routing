@@ -7,6 +7,7 @@ const CharacterCard = (props) => {
     const { char, onClick } = props
 
     return (
+        
         <Card style={cardStyle} onClick={onClick} value={char.name}>
             <Card.Body>
                 <Card.Img src={char.img} style={imageStyle} alt={char.name}/>

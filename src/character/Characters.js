@@ -30,13 +30,9 @@ class Characters extends Component {
         const char = e.target.parentElement.textContent
         fetch(`https://www.breakingbadapi.com/api/characters?name=${char}`)
         .then(resp => resp.json())
-        .then(c => this.setState({
-            chars: c
+        .then(chars => this.setState({
+            chars
         }))
-    }
-
-    showAllChars = () => {
-        this.fetchAllCharacters()
     }
 
     handleOnChange = (e) => {
@@ -61,10 +57,9 @@ class Characters extends Component {
         ))
     }
 
-
     render() {
         return (
-            <div>
+            <>
                 {this.fixPic()}
         
 
@@ -76,11 +71,8 @@ class Characters extends Component {
 
                 <CharactersList chars={this.state.chars} onClick={this.onClick}/>
 
-
-                <br/>
-                <br/>
                 
-            </div>
+            </>
 
         );
     }

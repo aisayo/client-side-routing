@@ -23,7 +23,7 @@ Faster because we are not waiting for a response, just switching components
 
 4. Use `Route` to define route and component associated with route:
     `<Route path="/" component={Home} />`
-    
+
     - the `Route` component receives 2 props: `path` and `component`
 
 exact path
