@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 import SearchForm from '../SearchForm'
-import CharactersList from './CharactersList'
+import CharactersIndex from './CharactersIndex'
 
-class Characters extends Component {
+class CharactersContainer extends Component {
 
     constructor() {
         super()
@@ -24,15 +24,6 @@ class Characters extends Component {
 
     componentDidMount(){
         this.fetchAllCharacters()
-    }
-
-    onClick = (e) => {
-        const char = e.target.parentElement.textContent
-        fetch(`https://www.breakingbadapi.com/api/characters?name=${char}`)
-        .then(resp => resp.json())
-        .then(chars => this.setState({
-            chars
-        }))
     }
 
     handleOnChange = (e) => {
@@ -68,7 +59,7 @@ class Characters extends Component {
                     handleOnChange={this.handleOnChange}
                 />
 
-                <CharactersList chars={this.state.chars} onClick={this.onClick}/>
+                <CharactersIndex chars={this.state.chars}/>
 
                 
             </>
@@ -77,6 +68,6 @@ class Characters extends Component {
     }
 }
 
-export default Characters;
+export default CharactersContainer;
 
 
