@@ -3,16 +3,16 @@ import React from 'react';
 
 import TextField from './common/TextField'
 
-const SearchForm = (props) => {
+const SearchForm = ( {onSubmit, state, handleOnChange} ) => {
 
     return (
 
-        <form onSubmit={props.onSubmit} style={formStyle}>
+        <form onSubmit={onSubmit} style={formStyle}>
             
             <TextField 
                 type="text" 
-                value={props.state.query} 
-                handleOnChange={props.handleOnChange}
+                value={state.query} 
+                handleOnChange={handleOnChange}
             />
         
             <TextField 

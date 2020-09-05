@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 
 import About from './About'
 import Welcome from './Welcome';
-import Characters from './character/Characters';
+import CharacterPage from './character/CharacterPage';
 import Nav from './NavBar'
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
 
                 <Route exact path="/" component={Welcome} />
                 <Route exact path='/about' component={About} />
-                <Route exact path='/characters' component={Characters} />
+                <Route exact path='/characters' component={CharacterPage} />
                         
             </>
         );

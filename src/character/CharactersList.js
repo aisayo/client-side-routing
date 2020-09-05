@@ -2,9 +2,7 @@ import React from 'react';
 
 import CharacterCard from './CharacterCard';
 
-const CharactersList = (props) => {
-
-    const { chars, onClick } = props
+const CharactersList = ({ chars, onClick }) => {
 
     return (
 

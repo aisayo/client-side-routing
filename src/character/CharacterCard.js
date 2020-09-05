@@ -2,9 +2,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap'
 
 
-const CharacterCard = (props) => {
-
-    const { char, onClick } = props
+const CharacterCard = ({ char, onClick }) => {
 
     return (
         

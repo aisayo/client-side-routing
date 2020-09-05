@@ -48,6 +48,7 @@ exact path
 
 - match.url
 - match.path
+- routerProps
 
 ### Render inside of Route 
 
@@ -62,3 +63,7 @@ exact path
 
 - [React Router](https://reactrouter.com/web/guides/quick-start)
 - [React Router Video](https://reactrouter.com/)
+
+
+
+goal => when i click a charactercard, it shows me the info
