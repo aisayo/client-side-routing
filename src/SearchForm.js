@@ -1,12 +1,13 @@
 import React from 'react';
 
+
 import TextField from './common/TextField'
 
 const SearchForm = (props) => {
 
     return (
 
-        <form onSubmit={props.onSubmit}>
+        <form onSubmit={props.onSubmit} style={formStyle}>
             
             <TextField 
                 type="text" 
@@ -24,3 +25,9 @@ const SearchForm = (props) => {
 };
 
 export default SearchForm;
+
+const formStyle = {
+    display: 'block',
+    alignItems:'center', 
+    justifyContent:'center'
+}

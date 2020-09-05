@@ -61,7 +61,6 @@ class Characters extends Component {
         return (
             <>
                 {this.fixPic()}
-        
 
                 <SearchForm  
                     onSubmit={this.submitSearchForm} 
