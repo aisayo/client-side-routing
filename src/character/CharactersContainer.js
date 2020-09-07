@@ -49,6 +49,10 @@ class CharactersContainer extends Component {
     }
 
     render() {
+
+        console.log(this.props)
+        console.log(this.state)
+
         return (
             <>
                 {this.fixPic()}

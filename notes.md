@@ -25,26 +25,32 @@ Faster because we are not waiting for a response, just switching components
     `<Route path="/" component={Home} />`
 
     - the `Route` component receives 2 props: `path` and `component`
+    - `Exact path` ensures exact path matches are made
 
-exact path
+### Link
+
+- Equivalent to `<a>` tag
+- Takes in `to` prop that provides detail about link location. Like `href`
 
 ### NavLink
 
-- Different from `<Link>` only by allowing styling 
+- Different from `<Link>` only by allowing styling
 
-- Has many different styling props:
+#### Props:
 
-  - activeClassName - set to 'active' by default when link is clicked, can be customized (good to use in CSS)
-  - activeStyle - allows inline styling of selected link
-  - exact will style the exact link that matches the URL
+- activeClassName - set to 'active' by default when link is clicked, can be customized (good to use in CSS)
+- activeStyle - allows inline styling of selected link
+- exact will style the exact link that matches the URL
 
-### Link
+
 
 ### Switch
 
 - looks through its children `<Route>`s and renders the first one that matches the current URL.
+- Once it finds the first route that matches the path, it will not look for any other matches
+- Should be used with `exact path`
 
-### Nested Routing 
+### Nested Routing
 
 - match.url
 - match.path
@@ -53,17 +59,13 @@ exact path
 ### Render inside of Route 
 
 - used to pass props down
-- used for simple route renders by defining inline code
+- used for simple route renders by defining inline code:
 
-### useParams()
+  `render={() => <div>Home</div>}`
 
-- 
+- Can return a component as well, allows access to `routerProps`
 
 ## Resources
 
 - [React Router](https://reactrouter.com/web/guides/quick-start)
 - [React Router Video](https://reactrouter.com/)
-
-
-
-goal => when i click a charactercard, it shows me the info

@@ -3,10 +3,10 @@ import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 
-import CharacterCard from './CharacterCard';
+// import CharacterCard from './CharacterCard';
 
 const CharactersIndex = ({ chars }) => {
-
+    
     return (
 
         <div>

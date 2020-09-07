@@ -18,7 +18,7 @@ class App extends Component {
 
                 <Route exact path="/" component={Welcome} />
                 <Route exact path='/about' component={About} />
-                <Route exact path='/characters' component={CharactersContainer} />
+                <Route exact path='/characters' render={routerProps => <CharactersContainer {...routerProps} />} />
                         
             </>
         );
@@ -26,3 +26,5 @@ class App extends Component {
 }
 
 export default App;
+
+
