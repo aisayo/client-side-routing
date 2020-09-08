@@ -1,30 +1,18 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
-
-import About from './About'
-import Welcome from './Welcome';
-import CharactersContainer from './character/CharactersContainer';
-import Nav from './NavBar'
 
 class App extends Component {
 
     render() {
-        
         return (
+            <div>
+            </div>
             
-            <>
-
-                <Nav />
-
-                <Route exact path="/" component={Welcome} />
-                <Route exact path='/about' component={About} />
-                <Route exact path='/characters' render={routerProps => <CharactersContainer {...routerProps} />} />
-                        
-            </>
         );
     }
 }
 
+
 export default App;
+
 
 

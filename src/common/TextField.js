@@ -1,11 +1,11 @@
 import React from 'react';
 
-const TextField = ({ type, value, handleOnChange }) => {
+const TextField = (props) => {
     return (
         <input 
-            type={type}
-            value={value}
-            onChange={handleOnChange}
+            type={props.type}
+            value={props.value}
+            onChange={props.handleOnChange}
         />
     );
 };

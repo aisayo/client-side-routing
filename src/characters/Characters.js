@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
-import SearchForm from '../SearchForm'
-import CharactersIndex from './CharactersIndex'
+import CharacterForm from './CharacterForm'
+import CharacterCard from './CharacterCard'
+import Button from '../common/Button'
 
-class CharactersContainer extends Component {
+
+class Characters extends Component {
 
     constructor() {
         super()
@@ -23,6 +25,19 @@ class CharactersContainer extends Component {
     }
 
     componentDidMount(){
+        this.fetchAllCharacters()
+    }
+
+    onClick = (e) => {
+        const char = e.target.parentElement.textContent
+        fetch(`https://www.breakingbadapi.com/api/characters?name=${char}`)
+        .then(resp => resp.json())
+        .then(c => this.setState({
+            chars: c
+        }))
+    }
+
+    showAllChars = () => {
         this.fetchAllCharacters()
     }
 
@@ -48,30 +63,30 @@ class CharactersContainer extends Component {
         ))
     }
 
+
     render() {
-
-        console.log(this.props)
-        console.log(this.state)
-
         return (
-            <>
+            <div>
                 {this.fixPic()}
 
-                <SearchForm  
+                <CharacterForm  
                     onSubmit={this.submitSearchForm} 
                     state={this.state} 
                     handleOnChange={this.handleOnChange}
                 />
 
-                <CharactersIndex chars={this.state.chars}/>
 
+                <br/>
+                <br/>
+
+                <Button onClick={this.onClick} text='Go Back' />
                 
-            </>
+            </div>
 
         );
     }
 }
 
-export default CharactersContainer;
+export default Characters;
 
 
