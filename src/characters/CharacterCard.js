@@ -1,17 +1,11 @@
-// render to each individual character info 
-
-// presentational 
-
 import React from 'react';
 import { Card } from 'react-bootstrap'
 
 
-const CharacterCard = (props) => {
-
-    const { char, onClick } = props
+const CharacterCard = ({ char }) => {
 
     return (
-        <Card style={cardStyle} onClick={onClick} value={char.name}>
+        <Card style={cardStyle}>
             <Card.Body>
                 <Card.Img src={char.img} style={imageStyle} alt={char.name}/>
                 <Card.Title>{char.name}</Card.Title>
