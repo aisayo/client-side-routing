@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import CharacterForm from './CharacterForm'
+import CharactersIndex from './CharactersIndex'
 
 class Characters extends Component {
 
@@ -24,19 +24,6 @@ class Characters extends Component {
     }
 
     componentDidMount(){
-        this.fetchAllCharacters()
-    }
-
-    onClick = (e) => {
-        const char = e.target.parentElement.textContent
-        fetch(`https://www.breakingbadapi.com/api/characters?name=${char}`)
-        .then(resp => resp.json())
-        .then(c => this.setState({
-            chars: c
-        }))
-    }
-
-    showAllChars = () => {
         this.fetchAllCharacters()
     }
 
@@ -73,14 +60,12 @@ class Characters extends Component {
                 {this.fixPic()}
                 {this.loading()}
 
-                <CharacterForm  
-                    onSubmit={this.submitSearchForm} 
+                <CharactersIndex 
+                    submitSearchForm={this.submitSearchForm} 
                     state={this.state} 
                     handleOnChange={this.handleOnChange}
                 />
-                
-                {this.state.chars.map(char => char.name)}
-                
+                                
             </div>
 
         );
