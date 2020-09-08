@@ -36,13 +36,11 @@ Faster because we are not waiting for a response, just switching components
 
 - Different from `<Link>` only by allowing styling
 
-#### Props:
+Props:
 
 - activeClassName - set to 'active' by default when link is clicked, can be customized (good to use in CSS)
 - activeStyle - allows inline styling of selected link
 - exact will style the exact link that matches the URL
-
-
 
 ### Switch
 
@@ -56,7 +54,7 @@ Faster because we are not waiting for a response, just switching components
 - match.path
 - routerProps
 
-### Render inside of Route 
+### Render inside of Route
 
 - used to pass props down
 - used for simple route renders by defining inline code:
@@ -69,3 +67,5 @@ Faster because we are not waiting for a response, just switching components
 
 - [React Router](https://reactrouter.com/web/guides/quick-start)
 - [React Router Video](https://reactrouter.com/)
+- [The Hooks of React Router](https://css-tricks.com/the-hooks-of-react-router/)
+- [React Router V5](https://reacttraining.com/blog/react-router-v5-1/)

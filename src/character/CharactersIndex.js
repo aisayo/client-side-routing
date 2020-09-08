@@ -6,16 +6,18 @@ import { Link } from 'react-router-dom'
 // import CharacterCard from './CharacterCard';
 
 const CharactersIndex = ({ chars }) => {
+
+    console.log("chars", chars)
     
     return (
 
         <div>
-            { Object.keys(chars).map(charID => 
-                <Link key={charID} to={`/characters/${charID}`}>
+            { chars.map(char => 
+                <Link key={char.char_id} to={`/characters/${char.char_id}`}>
                     < Card style={cardStyle}>
                         <Card.Body>
-                            <Card.Img src={chars[charID].img} style={imageStyle} alt={chars[charID].name}/>
-                            <Card.Title>{chars[charID].name}</Card.Title>
+                            <Card.Img src={char.img} style={imageStyle} alt={char.name}/>
+                            <Card.Title>{char.name}</Card.Title>
                         </Card.Body>
                     </Card>
                 </Link>
