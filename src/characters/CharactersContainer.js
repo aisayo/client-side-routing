@@ -9,7 +9,8 @@ class Characters extends Component {
 
         this.state = {
             chars: [],
-            query: ''
+            query: '',
+            isLoading: true
         }
     }
 
@@ -17,7 +18,8 @@ class Characters extends Component {
         fetch('https://www.breakingbadapi.com/api/characters')
         .then(resp => resp.json())
         .then(chars => this.setState({
-           chars
+           chars,
+           isLoading: false
         }))
     }
 
@@ -60,11 +62,16 @@ class Characters extends Component {
         ))
     }
 
+    loading(){
+        return this.state.isLoading ? <h1>Loading Characters...</h1> : null
+    }
 
     render() {
         return (
             <div>
+
                 {this.fixPic()}
+                {this.loading()}
 
                 <CharacterForm  
                     onSubmit={this.submitSearchForm} 
