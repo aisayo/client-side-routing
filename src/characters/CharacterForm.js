@@ -4,7 +4,7 @@
 //concerned with HOW things look 
 import React from 'react';
 
-import TextField from './common/TextField'
+import TextField from '../common/TextField'
 
 const CharacterForm = (props) => {
 

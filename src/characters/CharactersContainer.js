@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 import CharacterForm from './CharacterForm'
-import CharacterCard from './CharacterCard'
-import Button from '../common/Button'
-
 
 class Characters extends Component {
 
@@ -74,12 +71,8 @@ class Characters extends Component {
                     state={this.state} 
                     handleOnChange={this.handleOnChange}
                 />
-
-
-                <br/>
-                <br/>
-
-                <Button onClick={this.onClick} text='Go Back' />
+                
+                {this.state.chars.map(char => char.name)}
                 
             </div>
 
