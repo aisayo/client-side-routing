@@ -1,16 +1,20 @@
 import React from 'react';
 import { Card } from 'react-bootstrap'
 
+import { Link } from 'react-router-dom'
 
 const CharacterCard = ({ char }) => {
 
     return (
-        <Card style={cardStyle}>
-            <Card.Body>
-                <Card.Img src={char.img} style={imageStyle} alt={char.name}/>
-                <Card.Title>{char.name}</Card.Title>
-            </Card.Body>
-        </Card>
+        <Link to={`/characters/${char.char_id}`}>
+            <Card style={cardStyle}>
+                <Card.Body>
+                    <Card.Img src={char.img} style={imageStyle} alt={char.name}/>
+                    <Card.Title>{char.name}</Card.Title>
+                </Card.Body>
+            </Card>
+
+        </Link>
 
     );
 };

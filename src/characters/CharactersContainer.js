@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom'
+
 
 import CharactersIndex from './CharactersIndex'
+import CharacterShow from './CharacterShow'
 
 class Characters extends Component {
 
@@ -60,12 +63,21 @@ class Characters extends Component {
                 {this.fixPic()}
                 {this.loading()}
 
-                <CharactersIndex 
-                    submitSearchForm={this.submitSearchForm} 
-                    state={this.state} 
-                    handleOnChange={this.handleOnChange}
-                />
-                                
+            <Switch>
+
+                <Route path='/characters/:charId' render={() => <CharacterShow chars={this.state.chars}/>} />
+
+                <Route path='/characters' render={() => 
+                    <CharactersIndex 
+                        submitSearchForm={this.submitSearchForm} 
+                        state={this.state} 
+                        handleOnChange={this.handleOnChange}
+                    />
+                } />
+
+
+
+            </Switch>                          
             </div>
 
         );
