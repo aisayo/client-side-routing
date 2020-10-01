@@ -65,7 +65,7 @@ class Characters extends Component {
 
             <Switch>
 
-                <Route path='/characters/:charId' render={() => <CharacterShow chars={this.state.chars}/>} />
+                <Route path='/characters/:charId' render={(props) => <CharacterShow {...props} chars={this.state.chars}/>} />
 
                 <Route path='/characters' render={() => 
                     <CharactersIndex 
